@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex vs Grid</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        .section-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .mid1 {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+
+        .section-grid {
+            display: grid;
+            justify-content: space-between;
+            align-items: center;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 16fr 1fr;
+
+            .mid2 {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="section-flex">
+    <h3>Levá strana</h3>
+    <div class="mid1">
+        <h1>Flex</h1>
+        <p>Zde je text</p>
+    </div>
+    <h3>Pravá strana</h3>
+</section>
+
+<section class="section-grid">
+    <h3 class="leva">Levá strana</h3>
+    <div class="mid2">
+        <h1>Flex</h1>
+        <p>Zde je text</p>
+    </div>
+    <h3 class="prava">Pravá strana</h3>
+</section>
+
+
+</body>
+</html>
